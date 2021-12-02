@@ -54,7 +54,6 @@ def precipitation():
     precip_data = session.query(Measurement.date,Measurement.prcp).\
         filter(Measurement.date>=year_ago).\
         all()
-    session.close()
 
     precip_data_list = dict(precip_data)
     return jsonify(precip_data_list)

@@ -106,11 +106,10 @@ def Start_end_date(start_date, end_date):
     start_end = []
     for min, avg, max in results:
         start_end_dict = {}
-        start_end_dict["min_temp"] = min
-        start_end_dict["avg_temp"] = avg
-        start_end_dict["max_temp"] = max
-        start_end.append(start_end_dict) 
-    
+        min = start_end_dict["min_temp"] 
+        avg = start_end_dict["avg_temp"] 
+        max = start_end_dict["max_temp"]
+        start_end.append(start_end_dict)
 
     return jsonify(start_end)
 
